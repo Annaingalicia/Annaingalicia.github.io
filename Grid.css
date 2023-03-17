@@ -1,0 +1,324 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+*{
+ color: #2C4F42;
+    
+    text-align: center;
+    /*text-shadow: 4px 4px 8px #88B490;*/
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none; 
+}
+
+/*background-color: #F5FFFA;*/
+
+body{
+  font-family: 'Poppins', sans-serif;  
+  background-color: #F5FFFA;
+}
+
+.container{
+  max-width: 1200px;
+  margin:0 auto;
+
+}
+
+.header{
+  background-image: linear-gradient(
+  rgba(0,0,0,0.2),
+  rgba(0,0,0,0.2)),
+  url(GridImages/HeaderImage.avif);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 50vb;
+  display:flex;
+  align-items: center;
+}
+
+.menu {
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo{
+  color:#FFFDFC;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.menu .navbar ul li{
+  position: relative;
+  float:left;
+}
+
+.menu .navbar ul li a{
+  font-size: 18px;
+  padding: 20px;
+  color:#FFFDFC;
+  display: block;
+  font-weight: 600;
+}
+
+.menu .navbar ul li a:hover{
+  color: black;
+}
+
+#menu{
+  display: none;
+}
+
+.menu-icono{
+  width:25px;
+}
+
+.menu label{
+  cursor:pointer;
+  display:none;
+}
+
+.header-content{
+  text-align: center;
+}
+
+
+
+.perro{
+
+ /*border: 2px solid white;*/
+
+  box-sizing:border-box;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr ;
+  grid-auto-flow:row;
+  
+  display:grid;
+ 
+  gap: 30px 30px;
+  margin-top: 65px;
+  padding-bottom: 25px;
+  padding-left: 35px;
+
+}
+
+.perro img{
+  border-radius: 15px;
+}
+
+
+
+.gato{
+
+ 
+  box-sizing:border-box;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr ;
+  grid-auto-flow:row;
+  display:grid;
+  gap: 30px 30px;  
+  padding-bottom: 25px;
+  padding-top: 25px;
+  padding-left: 35px;
+  
+}
+
+.gato img{
+  border-radius: 15px;
+}
+
+.fantasy{
+   
+ 
+    box-sizing:border-box;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+    grid-auto-flow:row;
+    display:grid;
+    gap: 30px 30px;  
+    padding-bottom: 35px;
+    padding-left: 35px;
+}
+
+.fantasy img{
+
+  border-radius: 15px;
+}
+
+
+.glow {
+  font-size: 35px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #63B9B2, 0 0 20px #fff, 0 0 30px #88B490, 0 0 40px #88B490, 0 0 50px #88B490, 0 0 60px #88B490, 0 0 70px #88B490;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #A9FFF8, 0 0 40px #88B490, 0 0 50px #88B490, 0 0 60px #88B490, 0 0 70px #88B490, 0 0 80px #88B490;
+  }
+}
+
+.perro img:hover{
+
+transform: scale(1.1);
+border:#CD6767 double 3px;
+transition: 1s;
+ 
+}
+
+.fantasy img:hover{
+
+    transform: scale(1.1);
+    border: #CD6767 double 3px;
+    transition: 1s;
+     
+    }
+
+.gato img:hover{
+
+    transform: scale(1.1);
+    border: #CD6767 double 3px;
+    transition: 1s;
+     
+    }
+
+
+/*empieza footer*/
+
+  .footer{
+      padding:100px 0;
+      background-color: #000000;
+
+}
+
+.footer-content{
+      display:flex;
+      justify-content: space-between;
+}
+
+.link h3{
+      font-size: 18px;
+      color:#F9FAFC;
+      margin-bottom: 15px;
+}
+
+.link a{
+      font-size: 16px;
+      color:#C5C5C5;
+      display:block;
+      margin-bottom: 15px;
+}
+
+@media(max-width:991px){
+  .menu{
+        padding:30px;
+  }
+
+  /*menu hamburguesa*/
+  
+  .menu label{
+       display:initial; 
+  }
+
+  .menu .navbar{
+        position:absolute;
+        top:100%;
+        left:0;
+        right:0;
+        background-color: #323337;
+        display:none;
+  }
+  .menu .navbar ul li{
+        width: 100%;
+  }
+
+  #menu:checked ~ .navbar{
+        display: initial;
+
+  }
+
+  .header-content{
+    padding: 100px 30px;
+}
+  .header-content p{
+    padding:0;
+}
+
+  .perro{
+
+   
+     box-sizing:border-box;
+     grid-template-columns: 1fr  ;
+     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+     grid-auto-flow:row;
+     
+     display:grid;
+    
+     gap: 30px 30px;
+     margin-top: 30px;
+     padding-bottom: 25px;
+     padding-left: 100px;
+     
+    
+   }
+
+   .gato{
+
+     
+      box-sizing:border-box;
+      grid-template-columns: 1fr  ;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-auto-flow:row;
+      display:grid;
+      gap: 30px 30px;  
+      padding-bottom: 25px;
+      padding-top: 25px;
+      padding-left: 100px;
+     
+      
+    }
+
+  .fantasy{
+    
+ 
+    box-sizing:border-box;
+    grid-template-columns: 1fr  ;
+    grid-template-rows: 1fr 1fr  1fr 1fr 1fr;
+    grid-auto-flow:row;
+    display:grid;
+   
+    gap: 30px 30px;  
+    padding-bottom: 35px;
+    padding-left: 100px;
+   
+}
+
+
+
+h1{
+  font-size: 25px;
+}
+  
+
+  .footer{
+        padding:0;
+  }
+
+  .footer-content{
+        flex-direction: column;
+        text-align: center;
+  }
+}
